@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A-One Transport Corporation | Brochure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--navy:#0b2545;--navy2:#13315c;--blue:#1c6dd0;--amber:#f9a826;--ink:#10243e;--body:#3d546e;--muted:#6c829b;--line:#dce4ee;--pale:#f3f7fc;--green:#12814f;--font:"Manrope","Segoe UI",Arial,sans-serif;--display:"Space Grotesk",var(--font)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#dce3ec;color:var(--body);font-family:var(--font);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{padding:16px}
+.page{position:relative;width:297mm;height:210mm;margin:0 auto 18px;overflow:hidden;background:#fff;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+.cover{padding:16mm 17mm;background:linear-gradient(118deg,#081d31 0%,#102e50 58%,#153d66 100%);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.cover::before{content:"";position:absolute;inset:0 0 0 41%;background:linear-gradient(90deg,rgba(8,29,49,.88),rgba(8,29,49,.16)),url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;opacity:.88}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,29,49,.65),transparent 42%);pointer-events:none}
+.cover>*{position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;font-size:15px}
+.brand img{width:42px;height:54px;object-fit:contain;background:#fff;border-radius:4px;padding:2px}
+.brand small{display:block;margin-top:3px;color:#c6d6e8;font-size:9px;letter-spacing:1.2px;text-transform:uppercase}
+.cover-copy{max-width:154mm;margin-top:8mm}
+.kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#ffd07a;font-weight:800;margin:0 0 9px}
+h1,h2,h3{font-family:var(--display);margin:0;color:var(--ink)}
+.cover h1{font-size:38pt;line-height:1.02;color:#fff;max-width:152mm}
+.cover h1 span{color:var(--amber)}
+.cover-sub{max-width:137mm;color:#e0e9f3;font-size:14px;line-height:1.55;margin:13px 0 18px}
+.cover-sub strong{color:#ffd07a}
+.primary-contact{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;background:var(--amber);color:var(--navy);border-radius:5px;font-weight:800;font-size:12px}
+.cover-hotline{margin:7px 0 0;color:#fff;font-size:10px}.cover-hotline strong{color:#ffd07a}
+.stats{display:flex;gap:0;max-width:167mm;border-top:1px solid rgba(255,255,255,.24);padding-top:12px;margin-top:12mm}
+.stat{flex:1;min-width:0;padding-right:4mm;margin-right:4mm;border-right:1px solid rgba(255,255,255,.2)}
+.stat:last-child{border:0;margin:0;padding:0}
+.stat b{display:block;color:#fff;font-family:var(--display);font-size:23px;line-height:1.1}
+.stat span{display:block;color:#ccdae8;font-size:9px;margin-top:4px}
+.cover-bottom{display:flex;justify-content:space-between;align-items:center;color:#dce7f3;font-size:10px;letter-spacing:.3px}
+.cover-bottom strong{color:#ffd07a}
+.details{padding:10mm 14mm;display:flex;flex-direction:column;gap:5mm}
+.page-head{display:flex;justify-content:space-between;align-items:end;border-bottom:2px solid var(--navy);padding-bottom:4mm}
+.page-head .kicker{color:var(--blue);margin-bottom:4px}
+.page-head h2{font-size:24pt;color:var(--navy)}
+.page-head p{font-size:9px;color:var(--muted);margin:4px 0 0}
+.page-brand{display:flex;align-items:center;gap:8px;color:var(--navy);font-weight:800;font-size:10px;text-align:right}
+.page-brand img{width:28px;height:35px;object-fit:contain}
+.details-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:9mm;min-height:0;flex:1}
+.fleet h3,.side-section h3{font-size:13px;color:var(--navy);margin:0 0 3mm}
+.fleet table{width:100%;border-collapse:collapse;font-size:8.3px;line-height:1.2}
+.fleet th{background:var(--navy);color:#fff;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:.6px;padding:7px 8px}
+.fleet td{padding:5.2px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.fleet tr:nth-child(even) td{background:#f7f9fc}
+.fleet td:first-child{font-weight:800;color:var(--navy);width:24%}
+.fleet td:nth-child(2){font-weight:700;color:#24496f;width:28%}
+.side{display:flex;flex-direction:column;gap:4mm}
+.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.region{padding:5px 7px;border:1px solid var(--line);border-radius:4px;background:var(--pale);min-height:28px}
+.region b{display:block;font-size:8px;color:var(--navy);margin-bottom:2px}
+.region span{display:block;font-size:7px;color:var(--body);line-height:1.25}
+.clients{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.client{height:24mm;display:grid;place-items:center;padding:5px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.client img{max-width:100%;width:100%;height:18mm;object-fit:contain}
+.client--videocon img{opacity:.5}
+.contact{padding:6px 10px;background:var(--navy);color:#fff;border-radius:5px;display:grid;grid-template-columns:1fr 1fr;gap:3px 12px}
+.contact b{font-size:7.6px;color:#ffd07a;display:block;margin-bottom:1px}
+.contact span{font-size:7.5px;line-height:1.25;color:#fff}
+.footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:4mm;color:var(--muted);font-size:7.5px}
+.footer strong{color:var(--navy)}
+@page{size:A4 landscape;margin:0}
+@media print{
+ html,body{background:#fff}
+ body{padding:0}
+ .page{margin:0;box-shadow:none}
+}
+@media screen{
+ .page{box-shadow:0 12px 36px rgba(11,37,69,.18)}
+}
+</style>
+</head>
+<body>
+<section class="page cover">
+  <div class="brand"><img src="a-one-transport-logo.png" alt="" /><div>A-One Transport Corporation<small>Road freight • Pan-India service</small></div></div>
+  <div class="cover-copy">
+    <p class="kicker">Full Truck Load &amp; Part Load</p>
+    <h1>Move your cargo.<br /><span>We’ll move it forward.</span></h1>
+    <p class="cover-sub">With <strong>25+ years of road-transport experience</strong>, we match loads from 1 tonne to 35 tonnes with options for standard, container, oversized and temperature-controlled cargo. Service all over India.</p>
+    <div class="primary-contact">Contact&nbsp; +91 9082508919 / +91 8355933818</div>
+    <p class="cover-hotline"><strong>Hotline Number:</strong> +91 7977108044</p>
+    <div class="stats">
+      <div class="stat"><b>25+</b><span>Years of experience</span></div>
+      <div class="stat"><b>18,500+</b><span>PIN codes served</span></div>
+      <div class="stat"><b>4,200+</b><span>Trucks in network</span></div>
+      <div class="stat"><b>50L+</b><span>Shipments delivered</span></div>
+    </div>
+  </div>
+  <div class="cover-bottom"><span>Pickup • LCV • Truck • Taurus • Trailer • ODC • Refrigerated</span><strong>Reliable road transport, load by load.</strong></div>
+</section>
+<section class="page details">
+  <header class="page-head">
+    <div><p class="kicker">A-One Transport Corporation</p><h2>Fleet, coverage &amp; contact</h2><p>Choose the right vehicle for your cargo, route and handling needs.</p></div>
+    <div class="page-brand"><img src="a-one-transport-logo.png" alt="" /><span>A-ONE<br />TRANSPORT</span></div>
+  </header>
+  <div class="details-grid">
+    <section class="fleet">
+      <h3>Vehicle guide</h3>
+      <table>
+        <thead><tr><th>Vehicle</th><th>Payload</th><th>Size / configuration</th></tr></thead>
+        <tbody>
+          <tr><td>Pickup</td><td>Up to 1 tonne</td><td>8 ft / 9 ft</td></tr>
+          <tr><td>LCV</td><td>Up to 3 tonnes</td><td>12 ft / 14 ft</td></tr>
+          <tr><td>Truck</td><td>Up to 7 tonnes</td><td>19 ft</td></tr>
+          <tr><td>Truck</td><td>Up to 10 tonnes</td><td>20 ft / 22 ft</td></tr>
+          <tr><td>Truck</td><td>Up to 12 tonnes</td><td>22 ft</td></tr>
+          <tr><td>Taurus</td><td>Up to 20 tonnes</td><td>22 ft</td></tr>
+          <tr><td>Taurus</td><td>21 / 22 / 24 tonnes</td><td>As per requirement</td></tr>
+          <tr><td>Trailer</td><td>20–35 tonnes</td><td>40 ft • Single / Double axle</td></tr>
+          <tr><td>ODC</td><td>9, 10, 12+ tonnes</td><td>Size as required • Single / Double axle</td></tr>
+          <tr><td>Container</td><td>Up to 6 tonnes</td><td>20 ft / 32 ft / 40 ft • Single / Double axle</td></tr>
+          <tr><td>Refrigerated van</td><td>As required</td><td>Temperature as required • Single / Double axle</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <aside class="side">
+      <section class="side-section">
+        <h3>Area-wise expertise</h3>
+        <div class="region-grid">
+          <div class="region"><b>North</b><span>Western Uttar Pradesh, Haryana, Chandigarh, Uttarakhand &amp; more</span></div>
+          <div class="region"><b>North-West</b><span>Rajasthan &amp; more</span></div>
+          <div class="region"><b>West</b><span>Gujarat, Maharashtra, Goa &amp; more</span></div>
+          <div class="region"><b>South</b><span>Karnataka, Andhra Pradesh &amp; more</span></div>
+          <div class="region"><b>Central</b><span>Madhya Pradesh &amp; more</span></div>
+          <div class="region"><b>East</b><span>Jharkhand, Odisha &amp; more</span></div>
+        </div>
+      </section>
+      <section class="side-section">
+        <h3>Companies we’ve worked with</h3>
+        <div class="clients">
+          <div class="client"><img src="J%20e%20Mechanical-cropped.png" alt="J E Mechanical" /></div>
+          <div class="client"><img src="images.png" alt="ONGC" /></div>
+          <div class="client"><img src="HD%20Fire%20Protect.jpeg" alt="HD Fire Protect" /></div>
+          <div class="client"><img src="Garnet.jpeg" alt="Garnet" /></div>
+          <div class="client"><img src="Autopack%20Machine%20Pvt%20Ltd.png" alt="Autopack Machines" /></div>
+          <div class="client client--videocon"><img src="Videocon.png" alt="Videocon" /></div>
+        </div>
+      </section>
+      <section class="contact">
+        <div><b>Contact</b><span>+91 9082508919<br />+91 8355933818</span></div>
+        <div><b>Hotline Number</b><span>+91 7977108044</span></div>
+        <div><b>Email</b><span>dpmtiwari03@gmail.com</span></div>
+        <div style="grid-column:1/-1"><b>Head Office</b><span>206, Neelkanth CHS, Poonam Nagar, Andheri East, Mumbai - 400093, Maharashtra, India</span></div>
+      </section>
+    </aside>
+  </div>
+  <div class="footer"><span><strong>A-One Transport Corporation</strong> • Full Truck Load &amp; Part Load</span><span>Fleet capacity and service details are subject to confirmation.</span></div>
+</section>
+</body>
+</html>

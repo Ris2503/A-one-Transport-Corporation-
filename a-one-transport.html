@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A-One Transport Corporation | Reliable Truck Transport Across India</title>
+<meta name="description" content="A-One Transport Corporation delivers full-load (FTL) and partial-load (LTL) truck transport across all of India. Book the right truck by load, size and location in minutes." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#0b2545;--navy-700:#13315c;--navy-600:#1b3a63;--blue:#1c6dd0;--blue-500:#2a7de1;
+  --blue-light:#e8f1fd;--amber:#f9a826;--amber-600:#e3900f;--amber-light:#fff3df;--green:#1fa971;--red:#e04f5f;
+  --ink:#10243e;--body:#3d546e;--muted:#6c829b;--line:#e2e8f0;--bg:#f5f8fc;--white:#fff;
+  --radius:10px;--radius-sm:8px;--radius-lg:16px;
+  --shadow-sm:0 2px 10px rgba(11,37,69,.06);--shadow:0 10px 30px rgba(11,37,69,.10);--shadow-lg:0 24px 60px rgba(11,37,69,.18);
+  --container:1180px;--font:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--font);color:var(--body);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4{color:var(--ink);line-height:1.2;font-weight:700;font-family:"Space Grotesk",var(--font)}
+h1{font-size:clamp(2rem,4.5vw,3.4rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:1.25rem}
+.container{width:min(var(--container),92%);margin-inline:auto}
+.section{padding:84px 0}
+.section--tight{padding:56px 0}
+.section--alt{background:var(--bg)}
+.section--navy{background:var(--navy);color:#cdd9e8}
+.section--navy h2,.section--navy h3{color:#fff}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--blue-light);padding:7px 14px;border-radius:999px;margin-bottom:18px}
+.section-head{max-width:680px;margin-bottom:48px}
+.section-head--center{margin-inline:auto;text-align:center}
+.section-head p{margin-top:14px;font-size:1.05rem;color:var(--muted)}
+.lead{font-size:1.12rem;color:var(--body)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:.97rem;padding:14px 26px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s,color .2s;white-space:nowrap;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--amber);color:var(--navy);box-shadow:0 8px 22px rgba(249,168,38,.35)}
+.btn--primary:hover{background:var(--amber-600);transform:translateY(-2px)}
+.btn--blue{background:var(--blue);color:#fff;box-shadow:0 8px 22px rgba(28,109,208,.3)}
+.btn--blue:hover{background:var(--blue-500);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--navy);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn--light{background:#fff;color:var(--navy)}
+.btn--light:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn--lg{padding:16px 34px;font-size:1.02rem}
+.btn--block{width:100%}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand__logo{width:44px;height:54px;object-fit:contain;flex-shrink:0}
+.brand__name{font-weight:900;color:var(--navy);font-size:1.1rem;line-height:1.1;letter-spacing:-.01em}
+.brand__tag{font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.nav__links{display:flex;align-items:center;gap:4px}
+.nav__links a{padding:10px 15px;border-radius:10px;font-weight:600;font-size:.95rem;color:var(--navy-700);transition:background .2s,color .2s;cursor:pointer}
+.nav__links a:hover,.nav__links a.active{background:var(--blue-light);color:var(--blue)}
+.nav__cta{display:flex;align-items:center;gap:12px}
+.nav__toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav__toggle span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px;transition:.3s}
+.hero{position:relative;background:linear-gradient(90deg,rgba(8,29,49,.97) 0%,rgba(8,29,49,.88) 46%,rgba(8,29,49,.48) 100%),url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2000&q=85") center 54%/cover no-repeat;color:#dce7f3;overflow:hidden;padding:72px 0 96px}
+.hero::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='1'/%3E%3C/svg%3E");pointer-events:none}
+.hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{color:#fff}.hero h1 span{color:var(--amber)}
+.hero__sub{margin:22px 0 30px;font-size:1.15rem;color:#c3d2e6;max-width:540px}
+.hero__sub strong{color:var(--amber);font-weight:800}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero__trust{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
+.hero__trust div{font-size:.9rem;color:#a9bdd6}
+.hero__trust strong{display:block;font-size:1.7rem;color:#fff;font-weight:800}
+.hero__badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#e9f1fb;padding:8px 16px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:24px}
+.hero__badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(31,169,113,.25)}
+.quote-card{background:#fff;color:var(--ink);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow-lg)}
+.quote-card h3{font-size:1.2rem;margin-bottom:4px}
+.quote-card p.muted{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.quote-toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:var(--bg);padding:6px;border-radius:12px;margin-bottom:18px}
+.quote-toggle button{border:none;background:transparent;padding:10px;border-radius:9px;font-weight:700;cursor:pointer;color:var(--muted);font-family:inherit;font-size:.92rem;transition:.2s}
+.quote-toggle button.active{background:#fff;color:var(--navy);box-shadow:var(--shadow-sm)}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:.82rem;font-weight:700;color:var(--navy-700);margin-bottom:7px}
+.field .hint{font-weight:500;color:var(--muted);font-size:.76rem}
+.input,select.input,textarea.input{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;color:var(--ink);background:#fff;transition:border .2s,box-shadow .2s}
+.input:focus,select.input:focus,textarea.input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(28,109,208,.12)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ac{position:relative}
+.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:30;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;display:none;max-height:260px;overflow-y:auto}
+.ac-list.open{display:block}
+.ac-item{padding:10px 14px;cursor:pointer;font-size:.9rem;color:var(--ink);display:flex;gap:10px;align-items:flex-start;border-bottom:1px solid var(--bg)}
+.ac-item:last-child{border-bottom:none}
+.ac-item:hover,.ac-item.active{background:var(--blue-light)}
+.ac-item .pin{color:var(--blue);flex-shrink:0}
+.ac-item .sub{display:block;color:var(--muted);font-size:.78rem}
+.ac-note,.ac-loading{padding:10px 14px;font-size:.84rem;color:var(--muted)}
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.card__icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--blue-light);color:var(--blue);margin-bottom:18px;font-size:1.5rem}
+.card__icon--amber{background:var(--amber-light);color:var(--amber-600)}
+.card h3{margin-bottom:8px}.card p{font-size:.96rem;color:var(--muted)}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.svc__head{padding:30px 30px 0}
+.svc__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.tag-ftl{background:var(--amber-light);color:var(--amber-600)}
+.tag-ltl{background:var(--blue-light);color:var(--blue)}
+.svc__body{padding:20px 30px 30px;display:flex;flex-direction:column;gap:14px;flex:1}
+.svc__list{display:flex;flex-direction:column;gap:11px}
+.svc__list li{display:flex;gap:11px;font-size:.95rem;color:var(--body);align-items:flex-start}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{text-align:center;padding:24px}
+.stat strong{display:block;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1}
+.stat span{color:#9fb5d0;font-weight:600;font-size:.92rem;margin-top:8px;display:block}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{position:relative;padding:28px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}
+.step__num{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:16px}
+.step h3{font-size:1.08rem;margin-bottom:6px}.step p{font-size:.92rem;color:var(--muted)}
+.coverage{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.zone-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.zone{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.zone h4{color:var(--navy);font-size:1rem;margin-bottom:4px}
+.zone p{font-size:.85rem;color:var(--muted)}.zone span{color:var(--blue);font-weight:700}
+.feature{display:flex;gap:16px}
+.feature__icon{flex-shrink:0;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--blue-light);color:var(--blue);font-size:1.3rem}
+.feature h3{font-size:1.08rem;margin-bottom:5px}.feature p{font-size:.93rem;color:var(--muted)}
+.quote-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.quote-box p{font-style:italic;color:var(--body);margin-bottom:18px}
+.quote-box .who{display:flex;align-items:center;gap:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.who strong{color:var(--navy);font-size:.95rem;display:block}.who span{color:var(--muted);font-size:.82rem}
+.stars{color:var(--amber);margin-bottom:12px;letter-spacing:2px}
+.cta-band{background:linear-gradient(135deg,var(--blue),var(--navy));border-radius:var(--radius-lg);padding:52px;text-align:center;color:#fff}
+.cta-band h2{color:#fff}.cta-band p{color:#cfe0f5;margin:12px auto 26px;max-width:560px}
+.footer{background:var(--navy);color:#a9bdd6;padding:64px 0 28px}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
+.footer h4{color:#fff;font-size:1rem;margin-bottom:18px}
+.footer a{color:#a9bdd6;font-size:.92rem;display:inline-block;padding:5px 0;transition:color .2s;cursor:pointer}
+.footer a:hover{color:var(--amber)}
+.footer__brand p{font-size:.92rem;margin:16px 0;max-width:300px}
+.footer__contact li{display:flex;gap:10px;font-size:.9rem;margin-bottom:12px;align-items:flex-start}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#7f96b4}
+.social{display:flex;gap:10px;margin-top:18px}
+.social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#cdd9e8}
+.social a:hover{background:var(--amber);color:var(--navy)}
+.booking-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px;box-shadow:var(--shadow-sm)}
+.panel h2{font-size:1.4rem}
+.panel__step-label{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;display:block}
+.loadtype-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:8px}
+.loadtype{border:2px solid var(--line);border-radius:var(--radius);padding:20px;cursor:pointer;transition:border .2s,background .2s,transform .15s;position:relative;background:#fff}
+.loadtype:hover{border-color:var(--blue);transform:translateY(-2px)}
+.loadtype.selected{border-color:var(--blue);background:var(--blue-light)}
+.loadtype.selected::after{content:"✓";position:absolute;top:12px;right:14px;color:var(--blue);font-weight:900}
+.loadtype__icon{font-size:1.6rem;margin-bottom:10px}
+.loadtype h4{color:var(--navy);margin-bottom:4px;font-size:1.05rem}
+.loadtype p{font-size:.82rem;color:var(--muted)}
+.sticky-aside{position:sticky;top:96px}
+.suggest-empty{text-align:center;padding:30px 10px;color:var(--muted)}
+.suggest-empty .big{font-size:2.6rem;margin-bottom:10px}
+.result-truck{border:1.5px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px;display:flex;gap:16px;align-items:center;transition:border .2s,box-shadow .2s;background:#fff}
+.result-truck.best{border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-light);position:relative}
+.result-truck.best::before{content:"RECOMMENDED";position:absolute;top:-10px;left:16px;background:var(--amber);color:var(--navy);font-size:.62rem;font-weight:900;letter-spacing:.08em;padding:3px 9px;border-radius:999px}
+.result-truck__emoji{font-size:2rem;width:54px;height:54px;display:grid;place-items:center;background:var(--bg);border-radius:12px;flex-shrink:0}
+.result-truck h4{color:var(--navy);font-size:1.02rem;margin-bottom:2px}
+.result-truck p{font-size:.82rem;color:var(--muted)}
+.result-truck .cap{font-size:.78rem;color:var(--blue);font-weight:700;margin-top:3px}
+.est-box{background:var(--navy);color:#fff;border-radius:var(--radius);padding:20px;margin-top:6px}
+.est-box .row{display:flex;justify-content:space-between;padding:7px 0;font-size:.92rem;color:#c7d6ea}
+.est-box .row.total{border-top:1px solid rgba(255,255,255,.15);margin-top:8px;padding-top:14px;font-size:1.1rem}
+.est-box .row.total strong{color:var(--amber);font-size:1.4rem}
+.est-note{font-size:.75rem;color:#9fb5d0;margin-top:10px}
+.pill-info{display:flex;gap:10px;align-items:center;background:var(--amber-light);border-radius:10px;padding:12px 14px;font-size:.86rem;color:var(--navy-700);margin-bottom:18px}
+.alert{padding:12px 15px;border-radius:10px;font-size:.9rem;margin-top:14px}
+.alert--success{background:#e7f7f0;color:#0f7a52;border:1px solid #b8e6d2}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.message-preview{margin-top:12px;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--body);font-size:.88rem;white-space:pre-wrap;overflow-wrap:anywhere}
+.btn--whatsapp{background:#138a55;color:#fff}
+.btn--whatsapp:hover{background:#0f7547;transform:translateY(-2px)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.info-card{display:flex;gap:14px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:16px}
+.info-card__icon{width:46px;height:46px;border-radius:12px;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.info-card h4{color:var(--navy);font-size:1rem;margin-bottom:3px}.info-card p{font-size:.9rem;color:var(--muted)}
+.check-list li{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start;font-size:.98rem;color:var(--body)}
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.media-card{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.mv-card{padding:30px;border-radius:var(--radius-lg);border:1px solid var(--line);background:#fff}
+.mv-card .card__icon{margin-bottom:20px}
+.faq-item{border:1px solid var(--line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden;background:#fff}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;font-weight:700;color:var(--navy);font-size:1.02rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;gap:16px}
+.faq-q .ic{transition:transform .25s;color:var(--blue);flex-shrink:0}
+.faq-item.open .faq-q .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 20px;color:var(--muted);font-size:.95rem}
+.fleet-card{padding:24px;min-height:220px}
+.fleet-card__head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.fleet-card__head .emoji{width:46px;height:46px;display:grid;place-items:center;background:var(--blue-light);border-radius:10px;font-size:1.6rem;flex-shrink:0}
+.fleet-card h3{color:var(--navy);font-size:1.12rem}
+.fleet-card__specs{display:grid;gap:10px}
+.fleet-card__spec{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;border-top:1px solid var(--line);padding-top:9px}
+.fleet-card__spec dt{font-size:.78rem;color:var(--muted);font-weight:600}
+.fleet-card__spec dd{font-size:.84rem;color:var(--navy-700);font-weight:700}
+.client-logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.client-logo{min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;border:1px solid var(--line);border-radius:8px;background:#fff;transition:transform .2s,border-color .2s,box-shadow .2s;overflow:hidden}
+.client-logo:hover{transform:translateY(-3px);border-color:#cbd8e7;box-shadow:var(--shadow)}
+.client-logo img{width:100%;max-width:260px;height:140px;object-fit:contain}
+.client-logo--videocon img{opacity:.5;transition:opacity .25s ease}
+.client-logo--videocon:hover img,.client-logo--videocon:focus-within img{opacity:1}
+.client-story{max-width:780px;margin:18px auto 0;color:var(--muted);font-size:.98rem;line-height:1.8}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .fleet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .client-logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps,.stats{grid-template-columns:repeat(2,1fr)}
+  .coverage,.about-split,.contact-grid,.booking-wrap{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr 1fr}.sticky-aside{position:static}
+}
+@media(max-width:760px){
+  .nav__links,.nav__cta .btn{display:none}
+  .nav__toggle{display:block}
+  .nav.open .nav__links{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:16px;gap:4px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .nav.open .nav__links a{padding:14px}
+  .grid-2,.grid-3,.grid-4,.field-row,.loadtype-grid,.quote-toggle{grid-template-columns:1fr}
+  .fleet-grid{grid-template-columns:1fr}
+  .steps,.stats,.footer__grid,.zone-grid{grid-template-columns:1fr}
+  .cta-band{padding:36px 22px}.section{padding:60px 0}
+}
+@media(max-width:440px){
+  .client-logos{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#home" class="brand">
+        <img class="brand__logo" src="a-one-transport-logo.png" alt="A-One Transport Corporation logo" />
+        <div><div class="brand__name">A-One Transport</div><div class="brand__name">Corporation</div></div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book a Truck</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="tel:+917977018044" class="btn btn--ghost">📞 +91 7977018044</a>
+        <a href="#booking" class="btn btn--primary">Get a Quote</a>
+      </div>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <span class="hero__badge"><span class="dot"></span> Serving all 28 states &amp; 8 UTs of India</span>
+        <h1>Move anything, <span>anywhere in India</span> — on time, every time.</h1>
+        <p class="hero__sub">Full Truck Load &amp; Part Load (1 Tonne) <strong>Service All Over India</strong></p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary btn--lg">Book a Truck →</a>
+          <a href="#services" class="btn btn--light btn--lg">Explore Services</a>
+        </div>
+        <div class="hero__trust">
+          <div><strong data-count="18500" data-suffix="+">0</strong> PIN codes served</div>
+          <div><strong data-count="4200" data-suffix="+">0</strong> Trucks in network</div>
+          <div><strong data-count="99.2" data-suffix="%">0</strong> On-time rate</div>
+        </div>
+      </div>
+      <div class="quote-card">
+        <h3>Quick Quote</h3>
+        <p class="muted">Tell us your load — we'll suggest the right truck.</p>
+        <div class="quote-toggle" id="heroToggle">
+          <button class="active" data-type="partial">📦 Partial Load</button>
+          <button data-type="full">🚛 Full Load</button>
+        </div>
+        <div class="field">
+          <label>Approx. weight</label>
+          <div class="field-row">
+            <input class="input" type="number" id="heroWeight" placeholder="e.g. 2.5" min="0" />
+            <select class="input" id="heroUnit"><option value="ton">Tonnes</option><option value="kg">kg</option></select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>From</label><input class="input" id="heroFrom" placeholder="Pickup city" /></div>
+          <div class="field"><label>To</label><input class="input" id="heroTo" placeholder="Drop city" /></div>
+        </div>
+        <button class="btn btn--blue btn--block" id="heroGo">See Suggested Trucks →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Value strip -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="feature reveal"><div class="feature__icon">⚡</div><div><h3>Instant Matching</h3><p>Smart engine picks the right truck by load, size &amp; route.</p></div></div>
+      <div class="feature reveal"><div class="feature__icon">📍</div><div><h3>Pan-India Reach</h3><p>Door-to-door delivery across every state and union territory.</p></div></div>
+      <div class="feature reveal"><div class="feature__icon">🛡️</div><div><h3>Insured Cargo</h3><p>Full transit insurance &amp; verified, GPS-tracked drivers.</p></div></div>
+      <div class="feature reveal"><div class="feature__icon">💬</div><div><h3>24×7 Support</h3><p>Real humans on call from booking to final delivery.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">What we move</span>
+      <h2>Two ways to ship — pick what fits your load</h2>
+      <p>Whether you have a few boxes or a factory consignment, we have a billing model and a truck for it.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="svc reveal">
+        <div class="svc__head"><span class="svc__tag tag-ltl">Partial Load • LTL</span><h3>Partial Load (Shared)</h3></div>
+        <div class="svc__body">
+          <p>Only pay for the space you use. We consolidate your cargo with other consignments going the same way — ideal for loads up to 3 Tonnes.</p>
+          <ul class="svc__list"><li>✔ Pay-per-weight, no empty-truck cost</li><li>✔ Ideal for SMEs, e-commerce &amp; small movers</li><li>✔ Scheduled multi-stop routing</li></ul>
+          <button class="btn btn--blue" data-book="partial">Book Partial Load →</button>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <div class="svc__head"><span class="svc__tag tag-ftl">Full Load • FTL</span><h3>Full Truck Load (Dedicated)</h3></div>
+        <div class="svc__body">
+          <p>An entire truck exclusively for your cargo — direct, point-to-point, fastest transit and zero handling in between. Best for bulk &amp; time-critical loads.</p>
+          <ul class="svc__list"><li>✔ Dedicated vehicle, direct route</li><li>✔ Mini trucks to 40-ft trailers</li><li>✔ Fastest transit, minimal handling</li></ul>
+          <button class="btn btn--primary" data-book="full">Book Full Load →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional services -->
+    <div class="section-head section-head--center reveal" style="margin-top:72px">
+      <span class="eyebrow">More ways we help</span>
+      <h2>Complete logistics, end to end</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal"><div class="card__icon">🌐</div><h3>Pan-India Transport</h3><p>Door-to-door freight to every state &amp; UT, including remote &amp; North-East regions.</p></div>
+      <div class="card reveal"><div class="card__icon card__icon--amber">🏭</div><h3>Industrial &amp; ODC</h3><p>Over-dimensional cargo, machinery &amp; project logistics with permits handled.</p></div>
+      <div class="card reveal"><div class="card__icon">📦</div><h3>Warehousing</h3><p>Short &amp; long-term storage with inventory handling at key hubs.</p></div>
+      <div class="card reveal"><div class="card__icon card__icon--amber">🔁</div><h3>Reverse Logistics</h3><p>Returns, RTO &amp; redistribution managed smoothly end to end.</p></div>
+      <div class="card reveal"><div class="card__icon">❄️</div><h3>Temperature-Controlled</h3><p>Reefer vehicles for perishable, pharma &amp; cold-chain cargo.</p></div>
+      <div class="card reveal"><div class="card__icon card__icon--amber">🏠</div><h3>Household Shifting</h3><p>Safe packing &amp; relocation for homes and offices across cities.</p></div>
+      <div class="card reveal"><div class="card__icon">📄</div><h3>e-Way Bill &amp; GST</h3><p>Full documentation support for compliant inter-state movement.</p></div>
+      <div class="card reveal"><div class="card__icon card__icon--amber">📡</div><h3>Live Tracking</h3><p>Real-time GPS visibility and proactive delivery updates.</p></div>
+    </div>
+
+    <!-- Fleet -->
+    <div class="section-head section-head--center reveal" style="margin-top:72px">
+      <span class="eyebrow">Our fleet</span>
+      <h2>A vehicle for every kind of load</h2>
+      <p>Compare payload and vehicle size, from compact pickups to 35-Tonne trailers. ODC and refrigerated setups are matched to cargo dimensions and temperature requirements.</p>
+    </div>
+    <div class="grid grid-3 fleet-grid">
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🛻</span><h3>Pickup</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 1 tonne</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>8 ft / 9 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚐</span><h3>LCV</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 3 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>12 ft / 14 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚚</span><h3>Truck</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 7 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>19 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚚</span><h3>Truck</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 10 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>20 ft / 22 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚛</span><h3>Truck</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 12 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>22 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚛</span><h3>Taurus</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 20 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>22 ft</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚛</span><h3>Taurus</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>21 / 22 / 24 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>As per requirement</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🚜</span><h3>Trailer</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>20–35 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>40 ft</dd></div><div class="fleet-card__spec"><dt>Axles</dt><dd>Single / Double</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">🏗️</span><h3>ODC</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>9, 10, 12+ Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>As required</dd></div><div class="fleet-card__spec"><dt>Axles</dt><dd>Single / Double</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">📦</span><h3>Container</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>Up to 6 Tonnes</dd></div><div class="fleet-card__spec"><dt>Size</dt><dd>20 ft / 32 ft / 40 ft</dd></div><div class="fleet-card__spec"><dt>Axles</dt><dd>Single / Double</dd></div></dl></article>
+      <article class="card fleet-card reveal"><div class="fleet-card__head"><span class="emoji">❄️</span><h3>Refrigerated van</h3></div><dl class="fleet-card__specs"><div class="fleet-card__spec"><dt>Payload</dt><dd>As required</dd></div><div class="fleet-card__spec"><dt>Temperature</dt><dd>As required</dd></div><div class="fleet-card__spec"><dt>Axles</dt><dd>Single / Double</dd></div></dl></article>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--center reveal"><span class="eyebrow">Simple process</span><h2>Book your truck in 4 easy steps</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="step__num">1</div><h3>Enter your load</h3><p>Choose partial or full, add weight, size &amp; locations.</p></div>
+      <div class="step reveal"><div class="step__num">2</div><h3>Get a smart match</h3><p>Our engine suggests the ideal truck &amp; a fare estimate instantly.</p></div>
+      <div class="step reveal"><div class="step__num">3</div><h3>Confirm pickup</h3><p>Our desk calls to finalise and schedules a verified driver.</p></div>
+      <div class="step reveal"><div class="step__num">4</div><h3>Track to delivery</h3><p>Live GPS updates until your cargo is safely delivered.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="stats">
+      <div class="stat reveal"><strong data-count="25" data-suffix="+">0</strong><span>Years of trust</span></div>
+      <div class="stat reveal"><strong data-count="18500" data-suffix="+">0</strong><span>PIN codes covered</span></div>
+      <div class="stat reveal"><strong data-count="50" data-suffix="L+">0</strong><span>Shipments delivered</span></div>
+      <div class="stat reveal"><strong data-count="4200" data-suffix="+">0</strong><span>Trucks in network</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="section section--alt" id="booking">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Book a truck</span>
+      <h2>Tell us your load, get an instant suggestion</h2>
+      <p>Choose partial or full load, enter weight &amp; search any location in India — we recommend the perfect truck with a fare estimate.</p>
+    </div>
+    <div class="booking-wrap">
+      <!-- Form -->
+      <div class="panel reveal">
+        <span class="panel__step-label">Step 1 — Load type</span>
+        <h2 style="margin-bottom:18px">What are you shipping?</h2>
+        <div class="loadtype-grid">
+          <div class="loadtype" data-type="partial"><div class="loadtype__icon">📦</div><h4>Partial Load</h4><p>Shared truck — pay only for your weight. Ideal for loads up to 3 Tonnes.</p></div>
+          <div class="loadtype" data-type="full"><div class="loadtype__icon">🚛</div><h4>Full Load</h4><p>A dedicated truck just for you. Best for bulk &amp; direct delivery.</p></div>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--line);margin:24px 0" />
+        <span class="panel__step-label">Step 2 — Load details</span>
+        <div class="field">
+          <label>Cargo weight <span class="hint">(suggestion is based on this)</span></label>
+          <div class="field-row">
+            <input class="input" type="number" id="weight" placeholder="e.g. 2.5" min="0" step="0.1" />
+            <select class="input" id="weightUnit"><option value="ton">Tonnes</option><option value="kg">kg</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Cargo type / size <span class="hint">(optional)</span></label>
+          <select class="input" id="cargoType">
+            <option value="">Select material (optional)</option>
+            <option>General goods / cartons</option><option>Furniture &amp; appliances</option>
+            <option>Industrial machinery (ODC)</option><option>Perishable / cold-chain</option>
+            <option>Construction material</option><option>Fragile / handle with care</option>
+          </select>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--line);margin:24px 0" />
+        <span class="panel__step-label">Step 3 — Route</span>
+        <div class="field-row">
+          <div class="field">
+            <label>Pickup location <span class="hint">(search any place in India)</span></label>
+            <div class="ac"><input class="input" id="fromCity" type="text" placeholder="City, town, area or PIN code" autocomplete="off" /><div class="ac-list" id="fromCityList"></div></div>
+          </div>
+          <div class="field">
+            <label>Drop location <span class="hint">(search any place in India)</span></label>
+            <div class="ac"><input class="input" id="toCity" type="text" placeholder="City, town, area or PIN code" autocomplete="off" /><div class="ac-list" id="toCityList"></div></div>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--line);margin:24px 0" />
+        <span class="panel__step-label">Step 4 — Your details</span>
+        <div class="field-row">
+          <div class="field"><label>Name</label><input class="input" id="custName" placeholder="Your name" /></div>
+          <div class="field"><label>Phone</label><input class="input" id="custPhone" placeholder="10-digit mobile" /></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted)">This booking form is not connected yet; no request will be sent.</p>
+      </div>
+      <!-- Result -->
+      <div class="sticky-aside reveal">
+        <div class="panel">
+          <span class="panel__step-label">Smart suggestion</span>
+          <div id="suggestResult">
+            <div class="suggest-empty"><div class="big">🚚</div><h3>Your truck suggestion appears here</h3><p>Select a load type and enter weight to get instant recommendations and a fare estimate.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;align-items:center;background:var(--blue-light);padding:14px 16px;border-radius:12px;font-size:.86rem;color:var(--navy-700)">🔒 <span>Your details are safe with us. No spam, ever.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-split">
+      <div class="reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>Freight options matched to your load</h2>
+        <p class="lead" style="margin:16px 0">Choose from the vehicle types listed here, from pickups and LCVs to trucks, containers, trailers, ODC vehicles and refrigerated vans. Recommendations start with payload; vehicle size, route and handling requirements also matter.</p>
+        <p style="color:var(--muted);margin-bottom:16px">For oversized cargo, provide its dimensions and axle requirements. For temperature-controlled loads, share the required temperature range so the vehicle can be confirmed.</p>
+        <ul class="check-list">
+          <li>✅ Partial- and full-load options</li>
+          <li>✅ Vehicle payloads and sizes shown for comparison</li>
+          <li>✅ Specialist details requested for ODC and refrigerated loads</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="media-card" style="background:linear-gradient(140deg,var(--navy),var(--blue));color:#fff;padding:44px;display:flex;flex-direction:column;gap:22px">
+          <div style="font-size:3.4rem">🚛</div>
+          <h3 style="color:#fff;font-size:1.5rem">What helps us find the right vehicle?</h3>
+          <p style="color:#cfe0f5">Cargo weight and dimensions, pickup and drop locations, and any special axle or temperature requirements.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission/Vision/Values -->
+    <div class="section-head section-head--center reveal" style="margin-top:72px"><span class="eyebrow">What drives us</span><h2>Mission, vision &amp; values</h2></div>
+    <div class="grid grid-3">
+      <div class="mv-card reveal"><div class="card__icon">🎯</div><h3>Our Mission</h3><p style="color:var(--muted);margin-top:8px">To make road freight simple and transparent — matching every load to the right truck at a fair price, anywhere in India.</p></div>
+      <div class="mv-card reveal"><div class="card__icon card__icon--amber">🔭</div><h3>Our Vision</h3><p style="color:var(--muted);margin-top:8px">To be India's most dependable technology-driven transport network, trusted by businesses of every size.</p></div>
+      <div class="mv-card reveal"><div class="card__icon">💎</div><h3>Our Values</h3><p style="color:var(--muted);margin-top:8px">Reliability, honesty in pricing, safety of cargo, and genuine customer care at every touchpoint.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="coverage">
+      <div class="reveal">
+        <span class="eyebrow">Regional coverage</span>
+        <h2>Area-wise transport expertise</h2>
+        <p class="lead" style="margin:16px 0 22px">Our listed service areas span northern, western, southern, central and eastern India. Share your pickup and delivery locations to discuss the right transport option.</p>
+        <ul class="check-list">
+          <li>✅ 50+ strategically located branch &amp; transit hubs</li>
+          <li>✅ Reverse logistics &amp; return-to-origin handling</li>
+          <li>✅ Hill, North-East &amp; remote-area delivery</li>
+        </ul>
+      </div>
+      <div class="zone-grid reveal">
+        <div class="zone"><h4>North</h4><p>Western Uttar Pradesh, Haryana, Chandigarh, Uttarakhand &amp; more</p></div>
+        <div class="zone"><h4>North-West</h4><p>Rajasthan &amp; more</p></div>
+        <div class="zone"><h4>West</h4><p>Gujarat, Maharashtra, Goa &amp; more</p></div>
+        <div class="zone"><h4>South</h4><p>Karnataka, Andhra Pradesh &amp; more</p></div>
+        <div class="zone"><h4>Central</h4><p>Madhya Pradesh &amp; more</p></div>
+        <div class="zone"><h4>East</h4><p>Jharkhand, Odisha &amp; more</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Companies we work with -->
+<section class="section" aria-labelledby="clients-title">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Our clients</span>
+      <h2 id="clients-title">Companies we’ve worked with</h2>
+      <p>We’re proud to have supported these companies with their transport and logistics needs.</p>
+    </div>
+    <div class="client-logos">
+      <div class="client-logo reveal"><img src="J%20e%20Mechanical-cropped.png" alt="J E Mechanical logo" loading="lazy" /></div>
+      <div class="client-logo reveal"><img src="images.png" alt="ONGC logo" loading="lazy" /></div>
+      <div class="client-logo reveal"><img src="HD%20Fire%20Protect.jpeg" alt="HD Fire Protect logo" loading="lazy" /></div>
+      <div class="client-logo reveal"><img src="Garnet.jpeg" alt="Garnet logo" loading="lazy" /></div>
+      <div class="client-logo reveal"><img src="Autopack%20Machine%20Pvt%20Ltd.png" alt="Autopack Machines logo" loading="lazy" /></div>
+      <div class="client-logo client-logo--videocon reveal"><img src="Videocon.png" alt="Videocon logo" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Reach us</span>
+        <h2 style="margin-bottom:24px">We're here to help, 24×7</h2>
+        <div class="info-card"><div class="info-card__icon">📞</div><div><h4>Contact</h4><p>+91 9082508919<br>+91 8355933818</p></div></div>
+        <div class="info-card"><div class="info-card__icon">☎️</div><div><h4>Hotline Number</h4><p>+91 7977108044</p></div></div>
+        <div class="info-card"><div class="info-card__icon">✉️</div><div><h4>Email</h4><p>dpmtiwari03@gmail.com<br>atc.prem@yahoo.com</p></div></div>
+        <div class="info-card"><div class="info-card__icon">📍</div><div><h4>Head Office</h4><p>206, Neelkanth CHS, Poonam Nagar,<br>Andheri East, Mumbai - 400093,<br>Maharashtra, India</p></div></div>
+        <div class="info-card"><div class="info-card__icon">🕑</div><div><h4>Support Hours</h4><p>Bookings &amp; tracking: 24×7<br>Office: Mon–Sat, 9 AM – 8 PM</p></div></div>
+      </div>
+      <div class="panel reveal">
+        <h2 style="margin-bottom:6px;font-size:1.4rem">Send us a message</h2>
+        <p style="color:var(--muted);font-size:.92rem;margin-bottom:20px">Preview your enquiry before opening WhatsApp. Add an email address to prepare an email copy too.</p>
+        <form id="contactForm">
+          <div class="field-row">
+            <div class="field"><label>Full name</label><input class="input" id="cName" placeholder="Your name" required /></div>
+            <div class="field"><label>Phone <span class="hint">(required)</span></label><input class="input" id="cPhone" type="tel" autocomplete="tel" placeholder="Mobile number" required /></div>
+          </div>
+          <div class="field"><label>Email <span class="hint">(optional)</span></label><input class="input" type="email" id="cEmail" autocomplete="email" placeholder="you@company.com" /></div>
+          <div class="field"><label>Enquiry type</label><select class="input" id="cType"><option>New booking / quote</option><option>Track a shipment</option><option>Bulk / corporate tie-up</option><option>Support / complaint</option><option>Other</option></select></div>
+          <div class="field"><label>Message</label><textarea class="input" id="cMsg" rows="4" placeholder="Tell us about your cargo, route or question..."></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Prepare Message →</button>
+          <div id="contactMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Ready to move your cargo?</h2>
+      <p>Get an instant truck suggestion and a transparent fare estimate — no sign-up needed.</p>
+      <a href="#booking" class="btn btn--primary btn--lg">Book a Truck Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="brand"><img class="brand__logo" src="a-one-transport-logo.png" alt="A-One Transport Corporation logo" /><div><div class="brand__name" style="color:#fff">A-One Transport</div><div class="brand__tag">Corporation</div></div></a>
+        <p>India's trusted partner for full-load and partial-load road transport. Moving businesses forward since 2000.</p>
+        <div class="social"><a href="#">f</a><a href="#">𝕏</a><a href="#">in</a><a href="#">◉</a></div>
+      </div>
+      <div><h4>Company</h4><a href="#about">About Us</a><br><a href="#services">Our Services</a><br><a href="#booking">Book a Truck</a><br><a href="#contact">Contact</a></div>
+      <div><h4>Services</h4><a href="#booking" data-book="full">Full Truck Load</a><br><a href="#booking" data-book="partial">Partial Load</a><br><a href="#services">Pan-India Transport</a><br><a href="#services">Specialized Cargo</a></div>
+      <div><h4>Get in touch</h4><ul class="footer__contact"><li>📍 <span>206, Neelkanth CHS, Poonam Nagar,<br>Andheri East, Mumbai - 400093,<br>Maharashtra, India</span></li><li>📞 <span>Contact: +91 9082508919<br>+91 8355933818</span></li><li>☎️ <span>Hotline Number: +91 7977108044</span></li><li>✉️ <span>dpmtiwari03@gmail.com</span></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> A-One Transport Corporation. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service · GST &amp; Compliance</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===================== Shared UI =====================
+(function(){
+  const nav=document.querySelector(".nav"),toggle=document.querySelector(".nav__toggle");
+  if(toggle&&nav)toggle.addEventListener("click",()=>nav.classList.toggle("open"));
+  nav.querySelectorAll(".nav__links a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+
+  const revealEls=document.querySelectorAll(".reveal");
+  if("IntersectionObserver"in window&&revealEls.length){
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12});
+    revealEls.forEach(el=>io.observe(el));
+  }else revealEls.forEach(el=>el.classList.add("in"));
+
+  const counters=document.querySelectorAll("[data-count]");
+  const animate=(el)=>{const target=parseFloat(el.dataset.count),suffix=el.dataset.suffix||"",dur=1400,start=performance.now();
+    const step=(now)=>{const p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3),val=target*eased;
+      el.textContent=(Number.isInteger(target)?Math.round(val):val.toFixed(1))+suffix;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);};
+  if(counters.length&&"IntersectionObserver"in window){
+    const co=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animate(e.target);co.unobserve(e.target);}});},{threshold:.5});
+    counters.forEach(c=>co.observe(c));
+  }
+
+  document.querySelectorAll(".faq-q").forEach(q=>q.addEventListener("click",()=>{
+    const item=q.closest(".faq-item"),answer=item.querySelector(".faq-a"),open=item.classList.toggle("open");
+    answer.style.maxHeight=open?answer.scrollHeight+"px":null;
+  }));
+
+  const yr=document.getElementById("year");if(yr)yr.textContent=new Date().getFullYear();
+
+  // scrollspy nav highlight
+  const sections=["home","services","booking","about","contact"].map(id=>document.getElementById(id)).filter(Boolean);
+  const links=Array.from(document.querySelectorAll('.nav__links a'));
+  const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+e.target.id));
+  }});},{rootMargin:"-45% 0px -50% 0px"});
+  sections.forEach(s=>spy.observe(s));
+
+  // contact form
+  const cf=document.getElementById("contactForm");
+  if(cf)cf.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!this.reportValidity())return;
+    const name=document.getElementById("cName").value.trim();
+    const phone=document.getElementById("cPhone").value.trim();
+    const email=document.getElementById("cEmail").value.trim();
+    const enquiry=document.getElementById("cType").value;
+    const message=document.getElementById("cMsg").value.trim();
+    const lines=[
+      "Enquiry",
+      "Name: "+name,
+      "Phone: "+phone,
+      "Email: "+(email||"Not provided"),
+      "Enquiry: "+enquiry,
+      "",
+      "Message: "+(message||"No additional details provided.")
+    ];
+    const body=encodeURIComponent(lines.join("\n"));
+    const msg=document.getElementById("contactMsg");
+    msg.replaceChildren();
+
+    const note=document.createElement("div");
+    note.className="alert alert--success";
+    note.textContent="Preview your message, then choose how to send it.";
+    const preview=document.createElement("div");
+    preview.className="message-preview";
+    preview.textContent=lines.join("\n");
+    const actions=document.createElement("div");
+    actions.className="contact-actions";
+
+    const whatsapp=document.createElement("a");
+    whatsapp.className="btn btn--whatsapp";
+    whatsapp.href="https://wa.me/917977018044?text="+body;
+    whatsapp.target="_blank";
+    whatsapp.rel="noopener noreferrer";
+    whatsapp.textContent="Send Message";
+    actions.append(whatsapp);
+
+    if(email){
+      const emailLink=document.createElement("a");
+      emailLink.className="btn btn--blue";
+      emailLink.href="mailto:dpmtiwari03@gmail.com?subject="+encodeURIComponent("Website enquiry: "+enquiry)+"&body="+body;
+      emailLink.textContent="Compose Email";
+      actions.append(emailLink);
+    }
+
+    msg.append(note,preview,actions);
+  });
+})();
+
+// ===================== Booking engine =====================
+const PHOTON="https://photon.komoot.io/api/";
+const INDIA_BBOX="68,6.5,97.5,37.5";
+const FLEET=[
+  {name:"Pickup",emoji:"🛻",maxKg:1000,payloadLabel:"Up to 1 tonne",sizeLabel:"8 ft / 9 ft",baseRate:22,note:"Light loads"},
+  {name:"LCV",emoji:"🚐",maxKg:3000,payloadLabel:"Up to 3 Tonnes",sizeLabel:"12 ft / 14 ft",baseRate:28,note:"Light commercial loads"},
+  {name:"Container",emoji:"📦",maxKg:6000,payloadLabel:"Up to 6 Tonnes",sizeLabel:"20 ft / 32 ft / 40 ft",baseRate:34,note:"Single- or double-axle options"},
+  {name:"Truck (19 ft)",emoji:"🚚",maxKg:7000,payloadLabel:"Up to 7 Tonnes",sizeLabel:"19 ft",baseRate:48,note:"Single-vehicle load"},
+  {name:"Truck (20 / 22 ft)",emoji:"🚛",maxKg:10000,payloadLabel:"Up to 10 Tonnes",sizeLabel:"20 ft / 22 ft",baseRate:55,note:"Single-vehicle load"},
+  {name:"Truck (22 ft)",emoji:"🚛",maxKg:12000,payloadLabel:"Up to 12 Tonnes",sizeLabel:"22 ft",baseRate:66,note:"Single-vehicle load"},
+  {name:"Taurus (22 ft)",emoji:"🚛",maxKg:20000,payloadLabel:"Up to 20 Tonnes",sizeLabel:"22 ft",baseRate:74,note:"Heavy load"},
+  {name:"Taurus",emoji:"🚛",maxKg:24000,payloadLabel:"21, 22 or 24 Tonnes",sizeLabel:"As per requirement",baseRate:74,note:"Size to be confirmed"},
+  {name:"Trailer (40 ft)",emoji:"🚜",maxKg:35000,payloadLabel:"20–35 Tonnes",sizeLabel:"40 ft • Single / Double axle",baseRate:92,note:"Heavy and oversized loads"}
+];
+function haversine(a,b){const R=6371,toRad=d=>d*Math.PI/180,dLat=toRad(b[0]-a[0]),dLon=toRad(b[1]-a[1]);
+  const x=Math.sin(dLat/2)**2+Math.cos(toRad(a[0]))*Math.cos(toRad(b[0]))*Math.sin(dLon/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
+function getCoords(id){const el=document.getElementById(id);if(el&&el.dataset.lat&&el.dataset.lon)return[parseFloat(el.dataset.lat),parseFloat(el.dataset.lon)];return null;}
+function estimateDistance(){const f=getCoords("fromCity"),t=getCoords("toCity");if(f&&t)return Math.max(20,Math.round(haversine(f,t)*1.25));return null;}
+function inr(n){return"₹"+Math.round(n).toLocaleString("en-IN");}
+function suggestTrucks(w){const fits=FLEET.filter(t=>t.maxKg>=w);if(!fits.length){const big=FLEET[FLEET.length-1];return{multi:Math.ceil(w/big.maxKg),options:[big]};}return{multi:1,options:fits.slice(0,3),best:fits[0]};}
+function shortPlace(s){return s.split(",").slice(0,2).join(",").trim();}
+function photonLabel(p){const parts=[p.name,p.district,p.city,p.county,p.state,p.postcode,p.country],seen=new Set();return parts.filter(x=>x&&!seen.has(x)&&seen.add(x)).join(", ");}
+function photonToItems(geo){if(!geo||!geo.features)return[];return geo.features.filter(f=>f.properties&&(f.properties.countrycode==="IN"||f.properties.country==="India")).map(f=>({display_name:photonLabel(f.properties),lat:f.geometry.coordinates[1],lon:f.geometry.coordinates[0]}));}
+
+function render(){
+  const out=document.getElementById("suggestResult");
+  const loadType=document.querySelector(".loadtype.selected")?.dataset.type;
+  const weight=parseFloat(document.getElementById("weight").value);
+  const unit=document.getElementById("weightUnit").value;
+  const cargoType=document.getElementById("cargoType").value;
+  const from=document.getElementById("fromCity").value,to=document.getElementById("toCity").value;
+  if(!loadType||!weight||weight<=0){
+    out.innerHTML='<div class="suggest-empty"><div class="big">🚚</div><h3>Your truck suggestion appears here</h3><p>Select a load type and enter weight to get instant recommendations and a fare estimate.</p></div>';return;
+  }
+  const weightKg=unit==="ton"?weight*1000:weight;
+  const distance=estimateDistance();
+  const {options,best,multi}=suggestTrucks(weightKg);
+  let html="";
+  if(cargoType.includes("ODC")||cargoType.includes("cold-chain"))html+='<div class="alert" style="background:var(--amber-light);color:var(--navy-700);border:1px solid #f3d79b;margin-bottom:14px;">Specialist configuration required. ODC vehicle size depends on cargo dimensions; refrigerated-van payload and temperature must be confirmed to your requirements.</div>';
+  if(loadType==="partial"){
+    html+='<div class="pill-info">📦 <span><strong>Partial Load (LTL)</strong> — you share vehicle space and pay only for the weight you move. Ideal for loads up to 3 Tonnes.</span></div>';
+    if(weightKg>3000)html+='<div class="alert" style="background:var(--amber-light);color:var(--navy-700);border:1px solid #f3d79b;">💡 At '+(weightKg/1000).toFixed(1)+' Tonnes, a <strong>Full Load</strong> is usually cheaper and faster. We\'ve shown the matching dedicated truck below too.</div>';
+  }else{
+    html+='<div class="pill-info" style="background:var(--blue-light);color:var(--navy-700);">🚛 <span><strong>Full Load (FTL)</strong> — a dedicated truck exclusively for your consignment, direct point-to-point.</span></div>';
+  }
+  html+='<label class="panel__step-label">Recommended Vehicle'+(options.length>1?"s":"")+'</label>';
+  if(multi>1)html+='<div class="alert" style="background:var(--amber-light);color:var(--navy-700);border:1px solid #f3d79b;margin-bottom:14px;">This load may need approximately <strong>'+multi+' 40-ft trailers</strong>. Confirm vehicle configuration with the transport team.</div>';
+  options.forEach((t,i)=>{
+    const isBest=best&&t.name===best.name&&i===0,util=Math.min(100,Math.round(weightKg/t.maxKg*100));
+    html+='<div class="result-truck '+(isBest?"best":"")+'"><div class="result-truck__emoji">'+t.emoji+'</div><div style="flex:1"><h4>'+t.name+'</h4><p>'+t.payloadLabel+' • '+t.sizeLabel+'</p><div class="cap">'+t.note+' • '+util+'% of listed maximum</div></div></div>';
+  });
+  const chosen=best||options[0];let fare;const distKm=distance||500;
+  if(loadType==="partial"&&weightKg<=3000){const perKg=0.85+distKm*0.0016;fare=Math.max(1200,weightKg*perKg);}
+  else{fare=chosen.baseRate*distKm*multi;fare=Math.max(fare,3500);}
+  const low=fare*0.9,high=fare*1.12;
+  const routeLabel=(from&&to)?shortPlace(from)+" → "+shortPlace(to):"Pan-India";
+  html+='<div class="est-box"><div class="row"><span>Load type</span><strong style="color:#fff">'+(loadType==="partial"?"Partial (LTL)":"Full (FTL)")+'</strong></div><div class="row"><span>Weight</span><span>'+(weightKg/1000).toFixed(2)+(weightKg===1000?' Tonne':' Tonnes')+'</span></div><div class="row"><span>Route</span><span>'+routeLabel+'</span></div><div class="row"><span>Est. distance</span><span>'+(distance?distance+" km":"500 km provisional")+'</span></div><div class="row total"><span>Estimated fare</span><strong>'+inr(low)+' – '+inr(high)+'</strong></div><p class="est-note">*Illustrative estimate using provisional rates. Final quote depends on route, vehicle, cargo, loading/unloading, tolls and GST.</p></div>';
+  html+='<button class="btn btn--primary btn--block" style="margin-top:16px" id="confirmBooking">Preview Booking Request →</button><div id="bookingMsg"></div>';
+  out.innerHTML=html;
+  document.getElementById("confirmBooking").addEventListener("click",()=>{
+    const name=document.getElementById("custName")?.value.trim(),phone=document.getElementById("custPhone")?.value.trim(),msg=document.getElementById("bookingMsg");
+    if(!name||!phone){msg.innerHTML='<div class="alert" style="background:#fdecef;color:#c0303f;border:1px solid #f5c2c9;">Please add your name & phone number above so our team can confirm.</div>';return;}
+    msg.innerHTML='<div class="alert" style="background:var(--amber-light);color:var(--navy-700);border:1px solid #f3d79b;">This demo booking form is not connected yet, so no request was sent.</div>';
+    msg.scrollIntoView({behavior:"smooth",block:"center"});
+  });
+}
+
+function setupAutocomplete(inputId,listId){
+  const input=document.getElementById(inputId),list=document.getElementById(listId);
+  if(!input||!list)return;
+  let timer=null,activeIdx=-1,items=[];
+  const close=()=>{list.classList.remove("open");list.innerHTML="";activeIdx=-1;};
+  const choose=(place)=>{input.value=place.display_name;input.dataset.lat=place.lat;input.dataset.lon=place.lon;close();render();};
+  const draw=()=>{
+    if(!items.length){list.innerHTML='<div class="ac-note">No matching place found in India.</div>';list.classList.add("open");return;}
+    list.innerHTML=items.map((p,i)=>{const parts=p.display_name.split(","),title=parts.slice(0,2).join(","),sub=parts.slice(2).join(",").trim();
+      return'<div class="ac-item '+(i===activeIdx?"active":"")+'" data-i="'+i+'"><span class="pin">📍</span><span><strong>'+title.trim()+'</strong>'+(sub?'<span class="sub">'+sub+'</span>':"")+'</span></div>';}).join("");
+    list.classList.add("open");
+    list.querySelectorAll(".ac-item").forEach(el=>el.addEventListener("mousedown",e=>{e.preventDefault();choose(items[+el.dataset.i]);}));
+  };
+  const search=async(q)=>{
+    try{const res=await fetch(PHOTON+"?q="+encodeURIComponent(q)+"&limit=8&lang=en&bbox="+INDIA_BBOX);
+      if(!res.ok)throw new Error("geocode failed");items=photonToItems(await res.json()).slice(0,6);activeIdx=-1;draw();
+    }catch(e){list.innerHTML='<div class="ac-note">Couldn\'t reach location service. Type the city name and continue.</div>';list.classList.add("open");}
+  };
+  input.addEventListener("input",()=>{
+    delete input.dataset.lat;delete input.dataset.lon;render();
+    const q=input.value.trim();clearTimeout(timer);
+    if(q.length<3){close();return;}
+    list.innerHTML='<div class="ac-loading">Searching…</div>';list.classList.add("open");
+    timer=setTimeout(()=>search(q),400);
+  });
+  input.addEventListener("keydown",e=>{
+    if(!list.classList.contains("open")||!items.length)return;
+    if(e.key==="ArrowDown"){e.preventDefault();activeIdx=(activeIdx+1)%items.length;draw();}
+    else if(e.key==="ArrowUp"){e.preventDefault();activeIdx=(activeIdx-1+items.length)%items.length;draw();}
+    else if(e.key==="Enter"){if(activeIdx>=0){e.preventDefault();choose(items[activeIdx]);}}
+    else if(e.key==="Escape")close();
+  });
+  document.addEventListener("click",e=>{if(!input.contains(e.target)&&!list.contains(e.target))close();});
+}
+
+async function geocodeAndSet(inputId,text){
+  if(!text)return;const input=document.getElementById(inputId);input.value=text;
+  try{const res=await fetch(PHOTON+"?q="+encodeURIComponent(text)+"&limit=5&lang=en&bbox="+INDIA_BBOX);
+    const hits=photonToItems(await res.json());
+    if(hits[0]){input.value=hits[0].display_name;input.dataset.lat=hits[0].lat;input.dataset.lon=hits[0].lon;render();}
+  }catch(e){}
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  setupAutocomplete("fromCity","fromCityList");
+  setupAutocomplete("toCity","toCityList");
+  document.querySelectorAll(".loadtype").forEach(el=>el.addEventListener("click",()=>{
+    document.querySelectorAll(".loadtype").forEach(x=>x.classList.remove("selected"));el.classList.add("selected");render();
+  }));
+  ["weight","weightUnit","cargoType"].forEach(id=>{const el=document.getElementById(id);if(el){el.addEventListener("input",render);el.addEventListener("change",render);}});
+
+  // "Book partial/full" buttons -> select load type + scroll to booking
+  document.querySelectorAll("[data-book]").forEach(btn=>btn.addEventListener("click",()=>{
+    const type=btn.dataset.book;
+    document.querySelectorAll(".loadtype").forEach(x=>x.classList.toggle("selected",x.dataset.type===type));
+    render();
+    document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+  }));
+
+  // Hero quick-quote -> fill booking + scroll
+  const toggle=document.getElementById("heroToggle");let heroType="partial";
+  toggle.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    toggle.querySelectorAll("button").forEach(x=>x.classList.remove("active"));b.classList.add("active");heroType=b.dataset.type;
+  }));
+  document.getElementById("heroGo").addEventListener("click",()=>{
+    const w=document.getElementById("heroWeight").value,u=document.getElementById("heroUnit").value;
+    const f=document.getElementById("heroFrom").value.trim(),t=document.getElementById("heroTo").value.trim();
+    document.querySelectorAll(".loadtype").forEach(x=>x.classList.toggle("selected",x.dataset.type===heroType));
+    if(w)document.getElementById("weight").value=w;
+    document.getElementById("weightUnit").value=u;
+    render();
+    if(f)geocodeAndSet("fromCity",f);
+    if(t)setTimeout(()=>geocodeAndSet("toCity",t),900);
+    document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+  });
+
+  render();
+});
+</script>
+</body>
+</html>
